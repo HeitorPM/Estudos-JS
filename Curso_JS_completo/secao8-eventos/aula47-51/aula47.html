@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso</h1>
+        <textarea id='msg'></textarea>
+    </div>
+    <script>
+        (function(){
+            'use strict'
+
+            var $txtMsg = document.getElementById('msg')
+            // a diferença entre keydown e keypress é que o key press so pega 
+            // caracteres, deixando control, shift e afins de lado
+            $txtMsg.addEventListener('keypress', keypress)
+            $txtMsg.addEventListener('keyup', keyup)
+            $txtMsg.addEventListener('keydown', keydown)
+            
+            $txtMsg.addEventListener('input', input)
+
+
+
+            // o problema de usar eles para validaçao é que em caso de utilizar ctrl c + crtl v
+            // os dados não serão pegos. No caso de usar voz tb n.
+            // o (e) nesse momento tem funçao meramente ilustrativa
+            function keypress(e){
+                console.log('keypress', this.value)
+            }
+            function keydown(e){
+                console.log('keydown', this.value)
+            }
+            function keyup(e){
+                console.log('keyup', this.value)
+
+            }
+            // como solução tem se o input
+
+            function input(e){
+                console.log('input')
+                console.log(this)
+            }
+
+        })()
+
+
+    </script>
+</body>
+</html>

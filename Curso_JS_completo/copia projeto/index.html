@@ -1,0 +1,68 @@
+<html lang="pt-BR">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+  <title>Login</title>
+  
+  </head>
+
+  <body style="margin: 0px;">
+    <div id="container" class="grid-container" name="container">
+
+      <header >
+        <nav class="headerNav" id="mainNav">
+          <div class="metade" style="text-align: left; margin-left: 5%;">
+            <ul class="listaHeader">
+              <li>
+                <a  href="index.html" > 
+              Logue para continuar
+                </a>
+             </li>
+            </ul>
+          </div>
+          <div  id="navbarResponsive" class="container metade" style="text-align: right; margin-right: 5%;">
+              <ul class="listaHeader">
+                <li>
+                  <a href="views/cadastro.html" target="_self" rel="noopener noreferrer">Cadastre-se</a>
+                  
+                </li>
+              </ul>
+          </div>
+      </nav>
+      </header>
+      
+      <div id="main">
+        <form name="formLogin" class="menuLogin">
+          <div id="login" class="grid-container" style="margin-bottom: 25px;">
+            <div>
+              <label for="email">Login</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div>
+              <label for="password">Senha</label>
+              <input type="password" name="password" id="password">
+            </div>
+            <div id='msgerro' style='display:none'>
+              Usuário ou senha não existentes
+            </div> 
+            <div>
+              <button id="entrar" onclick="valida()">Entrar</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+   
+
+      <div id="footer" class="grid-container">
+        <a href="#" target="_self" rel="noopener noreferrer" onclick="window.location.href = 'views/recuperacao.html'">Esqueceu sua senha?</a>
+      </div>
+
+    </div>
+
+  </body>
+
+  </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+                    debugger
+
+        var $demo = document.getElementById('demo')
+        var campo  =document.createElement('input');
+        campo.setAttribute('type', 'date');
+        campo.setAttribute('id', 'data')
+        
+        var btn = document.createElement("input");
+        btn.setAttribute('type', 'button')
+        btn.setAttribute('value', 'conferir data');
+        btn.addEventListener('click', conferir);
+        
+        demo.appendChild(campo);
+        demo.appendChild(btn);
+
+
+        function conferir(){
+            debugger;
+            let $data = document.getElementById('data').value;
+            var dataAtual = new Date();
+            dataAtual.setHours(0);
+            dataAtual.setMinutes(0);
+            dataAtual.setSeconds(0);
+            dataAtual.setMilliseconds(0);
+            var anoAtual = dataAtual.getFullYear();
+
+            let anoNiver = Number($data.slice(0,4));
+            let mesNiver = Number($data.slice(5,7)-1);
+            let diaNiver = Number($data.slice(8,10))
+
+            var dataNiver = new Date(anoAtual, mesNiver, diaNiver);
+
+            let dataAtualTS= dataAtual.getTime();
+            let dataNiverTS= dataNiver.getTime();
+ 
+            var swi =0
+
+            if(dataNiverTS<dataAtualTS){
+                dataNiver.setFullYear(++anoAtual);
+                dataNiverTS = dataNiver.getTime();
+
+                swi=1;
+
+            }else if(dataNiverTS==dataAtualTS){
+               swi=2;
+            }else{
+   
+                swi=3;
+            }
+
+            const UM_DIA_TS = 24 * 60 * 60 * 1000;
+            
+            var diferenca = Math.floor((dataNiverTS - dataAtualTS)/UM_DIA_TS);
+            var diferencaMeses= Math.floor(diferenca/30)
+            var diferencaDias = (diferenca-Math.floor(diferenca/30)*30);
+
+
+
+            switch (swi) {
+                case 1:
+                alert(`faltam ${diferencaMeses} meses e ${diferencaDias} dias pro seu aniversário`)
+                break;
+                case 2:
+                alert('parebens pelo seu aniversário')
+                break;
+                
+                case 3:
+                alert(`faltam ${diferencaMeses} meses e ${diferencaDias} dias pro seu aniversário`)
+                break;
+
+                default:
+                    alert('Algo deu errado!' + swi)
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>

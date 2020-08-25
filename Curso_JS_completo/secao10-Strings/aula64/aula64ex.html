@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='N'>Heitor Paiva Magalhães</div>
+    <input type="button" value ="formate" id="btn">
+    <script>
+
+        (function (){
+        'use strict';
+        
+        var $btn = document.getElementById('btn')
+        $btn.addEventListener('click', formatarNome)
+
+        function formatarNome(){
+            debugger
+        var $n = document.getElementById('N').innerText;
+        var semE = $n.split(" ");
+        var x= semE.length;
+        var ultimoNome = semE[x];
+        var nomeFormatado = [ultimoNome, " ,"];
+
+        for(let z=0;z<x-1;z++){
+            nomeFormatado.push(semE[z])
+        }
+        nomeFormatado.join(" ")
+        $n=nomeFormatado
+    }
+    })()
+    </script>
+</body>
+</html>

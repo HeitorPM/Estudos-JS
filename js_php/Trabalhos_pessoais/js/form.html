@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js">    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav class='headerNav' id='mainNav'>
+                <div class='metade' style="text-align: left; margin-left:5%">
+                    <ul class="listaHeader">
+                        <li>
+                            <a href="########">
+                                Voltar para o login
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="navbarResponsive" class='container metade' style="text-align: right; margin-right:5%;"></div>
+            </nav>
+        </header>
+
+        <div id="maincadastro">
+            <form action="" method="post" id="cadastro">
+             <section id="basic-infos">
+    
+              <div id="headercadastro">
+                <h2>Cadastro de cliente</h2>
+              </div>
+
+
+                <div id="nome">
+                    <label for="nome">Nome:</label>
+                     <input type="text" id='nometxt' placeholder=Nome max=80>
+                </div>
+                <div>
+                    <label for="sobrenome">Sobrenome:</label> <input type="text" id='sobrenome'>
+                </div>
+                <div>
+                    <label for="dob">Nascimento:</label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="11 números sem separador"
+                        title="Preencha esse campo apenas com 11 números, sem o uso de separador(traço).">
+                </div>
+
+                <div id='telefone'>
+                    <label for="telefoneCad">Telefone: <input type="tel" id='tel'>
+                </div>
+                <div>
+                    <div>
+                        <label for="cidadeCad">Cidade:</label>
+                        <select id="cidadeCad">
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="es">Espirito Santo</option>
+                            <option value="mg">Minas Gerais</option>
+                        </select>
+                      </div>
+                <div>
+                    <label for="tipoLogCad">Tipo:</label>
+                    <select id="tipoLogCad">
+                        <option value="rua">Rua</option>
+                        <option value="casa">Casa</option>
+                        <option value="apto">Apartamento</option>
+                    </select>
+                  </div>
+
+                <div id='endereço'>
+                    Endereço: <input type="text" id='end' placeholder="bairro">
+                    <input type="number" id='num' placeholder="nº">
+                    <input type="text" id='complemento' placeholder="complemento">
+                </div>
+                <div>
+                    <label for="cepCad">Cep:</label>
+                    <input type="text" name="cepCad" id="cepCad" placeholder="8 numeros sem separador">
+                </div>
+                <div id="email">
+                    <label for="emailCad">E-mail:</label><input type="email" id="ema" placeholder="email">
+                </div>
+                <div id='senha'>
+                    <label for ="senha">Senha: </label>
+                    <input type="password" id='sen' placeholder="senha">
+                </div>
+
+                <div id="submit">
+                    <input type="submit" value="submeter">
+                </div>
+        </section>
+
+    </div>
+
+
+</body>
+
+</html>

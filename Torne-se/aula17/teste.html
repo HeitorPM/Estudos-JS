@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<div id="resultado"></div>
+    <p>qweqweqweweasdasdq</p>
+    <script src="pessoa.js"></script>
+    <script src="fornecedor.js"></script>
+    <script src="cliente.js"></script>
+
+    <script>
+
+        var p= new Pessoa({nome: "Victor",telefone: "3333-4444",cpf: "32132313133"})
+        p.gravarEmMemoria()
+        Pessoa.todos()
+
+        var f= new Fornecedor({nome: "Heitor",telefone: "3333-4444",cpf: "32132313133"})
+        f.gravarEmMemoria()
+        Fornecedor.todos()
+
+        var e= new Cliente({nome: "Jose",telefone: "3333-4444",cpf: "32132313133"})
+        c.gravarEmMemoria()
+        Cliente.todos()
+
+        console.log(Pessoa.Base)
+        console.log(Fornecedor.Base)
+        console.log(Cliente.Base)
+
+        
+    </script>
+
+</html>

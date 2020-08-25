@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='txt'> AAUU
+    </div>
+    <input type="text" id = "nome">
+    
+    <button id ='btn' > formatar</button>
+    <!-- <input type="button" id='btn' value='formatar'> -->
+    
+    <!-- <button onclick="formatar()">formatar</button> -->
+
+    <script>
+
+        var $btn = document.getElementById('btn');
+        $btn.addEventListener('click', formatar);
+
+        function formatar(){
+            document.getElementById('txt').innerText = document.getElementById('nome').value;
+        }
+
+    </script>
+
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p><strong>Note:</strong> The addEventListener() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World";
+});
+</body>
+</html>

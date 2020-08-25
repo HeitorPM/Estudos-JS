@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id='d1'>
+
+</div>
+    <div id="resultado"></div>
+
+    <script>
+        (function () {
+            
+            var $d1 = document.getElementById('d1');
+
+            var n1 = document.createElement('input');
+            n1.setAttribute('type', 'number');
+            n1.setAttribute('class', 'nota');
+            n1.setAttribute('placeholder', 'Inserir nota 1');
+            $d1.appendChild(n1)
+
+            var n2 = document.createElement('input');
+            n2.setAttribute('type', 'number');
+            n2.setAttribute('class', 'nota');
+            n2.setAttribute('placeholder', 'Inserir nota 2');
+            $d1.appendChild(n2)
+
+
+            var btn = document.createElement('input');
+            btn.setAttribute('type', 'button');
+            btn.setAttribute('value', 'Calcular média');
+            $d1.appendChild(btn);
+            btn.addEventListener('click', avaliacao);
+
+            function avaliacao() {
+
+                var $nota = document.querySelectorAll('.nota');
+                var x =0;
+                var notas=[]
+                while($nota[x]){
+                    notas.push(Number($nota[x].value))
+                    x++;
+                }
+
+                var $result = document.getElementById('resultado');
+
+                if (!validar(notas) && calcularMedia(notas) >= 5) {
+
+                    $result.innerHTML = `Aluno aprovado com nota ${calcularMedia(notas)}`
+
+                } else {
+                    $result.innerHTML = 'Aluno reprovado'
+                }
+
+            }
+
+            function validar(arr){
+                
+                for(let y=0; y<arr.length; y++){
+                    if(arr[y]==0){
+                        return true;
+                    }
+                }
+            }
+
+            function calcularMedia(arr){
+                let media=0;
+                for(let y=0; y<arr.length; y++){
+                    media+=arr[y];
+                }
+                return media/arr.length;
+        }
+        })()
+    </script>
+</body>
+
+</html>

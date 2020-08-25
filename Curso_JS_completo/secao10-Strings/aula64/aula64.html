@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var teste = "ola mundo";
+        console.log(teste.length)
+
+        // muda apenas visualmente a primeira ocorrencia
+        console.log(teste.replace('o', 'O'))
+
+        // muda apenas visualmente todas as ocorrencias
+        console.log(teste.replace(/i/g, 'o'))
+
+        // posição da letra
+        console.log(teste.indexOf('o'))
+
+        // ultima posição da letra)
+        console.log(teste.lastIndexOf('o'))
+
+        // tira as 5 primeiras letras visualmente
+        console.log(teste.slice(5))
+         
+        // pega da posicao 6 ate a 10 visualmente
+        console.log(teste.slice(5, 10))
+
+        // imprime tudo menos os 5 caracteres iniciais
+        console.log(teste.substring(5))
+
+        // imprime tudo menos os 5 caracteres iniciais e do 11 pra frente
+        console.log(teste.substring(5,10))
+
+        // retira todas as repetições do que esta presente entre parenteses
+        // nesse caso tiraria o espaço, entregando 'ola' 'mundo'
+        console.log(teste.split(' '));
+
+        // para letra maiusculua
+        console.log(teste.toUpperCase())
+
+        // para letra minuscula
+        console.log(teste.toLowerCase())
+
+    </script>
+</body>
+</html>

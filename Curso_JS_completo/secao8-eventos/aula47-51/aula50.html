@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Curso</h1>
+        <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+
+        <!-- ver melhor como funciona o span -->
+        <!-- o style ="display: none;" tem a ver com o fato do progressive enhacement -->
+        <!-- que é um conceito que demonstra as camadas sem interdependencia, logo, no caso do js
+            apresentar um erro, o html fica sem demonstrar erros. Nesse caso especificamente o "restam" para de ser mostrado 
+        -->
+        <div id="restaContainer" style="display: none;">Restam <span id="resta"></span> caracteres</div>
+    </div>
+
+    <script>
+        (function(){
+            'use strict'
+            console.log(asdasd)
+
+            var $txtMsg = document.getElementById('msg')
+            var $restaContainer = document.getElementById('restaContainer')
+            var $resta = document.getElementById('resta')
+
+            var maxima = $txtMsg.maxLength;
+
+            // passa a mostrar o "restam x caracteres" a partir do momento em que o js for carregado
+            $restaContainer.style.display = 'block';
+
+            $resta.textContent = maxima;
+
+            $txtMsg.addEventListener('input', checkLength)
+            function checkLength(e){
+                var numeroLetras = this.value.length
+                resta.textContent =maxima - numeroLetras;
+
+            }
+
+        })()
+
+
+    </script>
+</body>
+</html>

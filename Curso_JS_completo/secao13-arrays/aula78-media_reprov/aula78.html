@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id='n1' placeholder="inserir Nota 1 ">
+    <input type="number" id='n2' placeholder="inserir Nota 2 ">
+    <input type="button" id= 'btn' value="calcular média">
+    <div id="resultado"></div>
+
+    <script>
+        (function(){
+            var $btn = document.getElementById('btn');
+            $btn.addEventListener('click',avaliação);
+
+            function avaliação(){
+                debugger;
+            var $n1 = Number(document.getElementById('n1').value);
+            var $n2 = Number(document.getElementById('n2').value);
+            var $result = document.getElementById('resultado');
+
+
+            if(!validar($n1,$n2) && calcularMedia($n1, $n2)>=5){
+                
+                    $result.innerHTML = `Aluno aprovado com nota ${calcularMedia($n1, $n2)}`
+
+            }else{
+                $result.innerHTML ='Aluno reprovado'
+            }
+            
+            }
+            function validar(nota1, nota2){
+                if(nota1==0 || nota2 ==0){
+                    return true;
+                }
+            }
+            function calcularMedia(nota1,nota2){
+                var media = (nota1+nota2)/2;
+                return media;
+            }
+            
+
+        })()
+    </script>
+</body>
+</html>

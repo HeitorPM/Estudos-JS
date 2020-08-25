@@ -1,0 +1,38 @@
+body{
+    /*para pegar a paleta de cores basta passar o mouse em cima de um 
+    dos numeros
+    */
+    background: rgb(83, 142, 231);
+    font:normal 15 pt arial;
+}
+
+header {
+    color: white;
+    text-align:center;
+}
+
+div{
+    /*serve para alinhar a imagem!
+    */
+    text-align:center;
+    padding: 8px;
+
+}
+
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363)
+
+}
+footer{
+    color: white;
+    text-align:center;
+    font-style:italic;
+
+
+}

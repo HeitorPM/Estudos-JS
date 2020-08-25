@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome" class="nome">
+        <button class="botao">Adicionar</button>
+
+    </div>
+</body>
+<script>
+var inputElement = document.querySelector('input[name=nome]');//armazena o que foi inserido no input
+var btnElement = document.querySelector('button.botao');//aponta pro botao
+
+btnElement.onclick = function(){
+    var text = inputElement.value;//pega o valor armazenado que foi inserido no input
+    alert(text);
+}
+//em resumo:
+//insira o input > uma variavel para espelhar/inserir o input > e uma variavel para pegar o VALOR da outra variavel do input
+
+//var inputElement = document.getELementByClassName('input')[0];
+//ou var inputElement = document.getELementByClassName('nome')[0];
+//var inputElement = document.querySelector('body div#app input');
+//var inputElement = document.querySelector('input[name=nome');
+//var inputElement = document.querySelector('div#app input');
+//var inputElement = document.querySelector('div#app input'); com o risco de pegar mais de um input
+//var inputElement = document.querySelectorAll('div#app input'); pegando todos ao mesmo tempo
+</script>
+</html>

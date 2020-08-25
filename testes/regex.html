@@ -1,0 +1,56 @@
+
+<html>
+<head>
+    <title>Mascara Telefone</title>
+<script type="text/javascript">
+/* Máscaras ER */
+// insere o objeto elemento como parametro
+// e a funcao que se aplicará ao elemento
+function mascara(o,f){
+    debugger
+    // v_obj vai ser o this, ou seja o input de telefone
+    v_obj=o 
+    // v fun= vai ser a função mtel
+    v_fun=f
+    // apos um milisegundo vai executar a função
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    // o valor do input de telefone vai receber 
+    // o returno da funçãoo mtel usando o input telefone 
+    // como parametro
+    v_obj.value=v_fun(v_obj.value)
+}
+// o this chamado la no window.onload vai servir como
+// parametro do mtel, ou seja o v
+function mtel(v){
+    v=v.replace(/\D/g,"");             //Remove tudo o que não é dígito
+    
+    // ^ do regex serve para verificar e aplicar apenas no inicio da string
+    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    
+    // o $ serve para verificar e aplicar apenas no final da string
+    v=v.replace(/(\d)(\d{4})$/g,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+// insere o id em que se quer aplicar a função
+function id( el ){
+	return document.getElementById( el );
+}
+// no carregamento da janela a função aplica a função id
+// ao apertar o botao, chamando a função mascara
+// o this vai servir como parametro pro mtel
+window.onload = function(){
+	id('telefone').onkeypress = function(){
+		mascaraTel( this, mtel );
+	}
+}
+</script>
+ 
+</head>
+<body>
+ 
+    <input type="text" name="telefone" id="telefone" maxlength="15" />
+ 
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum 
+    </p>
+    <p>
+        dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, eligendi perspiciatis vel pariatur sit veritatis sint iure repudiandae, voluptatem ad asperiores! Ea harum aperiam, obcaecati et culpa facere dolorum?
+    </p>
+    </div>
+    <script>
+        (function(){
+            window.addEventListener('load',init);
+
+
+
+
+            function init(){
+                var btn = document.createElement("INPUT");
+                btn.setAttribute("type", "button");
+                btn.setAttribute('value','formatar');
+                document.body.appendChild(btn);
+                var $paragrafos = document.querySelectorAll('p');
+
+                var x =0;
+                while($paragrafos[x]){
+                    $paragrafos[x].innerHTML = formatarTexto($paragrafos[x].innerHTML);
+                    x++;
+                }
+            }
+
+            function formatarTexto(texto){
+                var numeroMax = 240;
+                if(texto.length <=numeroMax) return texto;
+
+                var subTexto = texto.slice(0, numeroMax);
+                return subTexto + '...';
+            }
+
+
+
+        //     debugger;
+        // var $btn = document.getElementById('btn');
+        // $btn.addEventListener('click', formatar);
+
+
+
+        // function formatar(){
+        //     var $p = document.querySelectorAll('p')
+        //     var text = $p.innerHTML;
+        //     var c = text.slice(0,200);
+        //     var $demo = document.getElementById('demo');
+        //     $demo.innerHTML= c;
+        // }
+
+        })()
+    </script>
+</body>
+</html>

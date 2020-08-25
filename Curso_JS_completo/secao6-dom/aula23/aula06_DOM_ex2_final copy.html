@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <input type="text" id= "name" placeholder="Digite o nome" value= "AAU">
+        <button id="btn" >ok</button>
+        <div id="msg"></div>
+        
+        <script>
+                var $btn = document.getElementById('btn');
+                $btn.addEventListener
+                function escreve(){
+                window.txtNome = document.getElementById('name');
+                var nome = txtNome.value;
+                document.getElementById('msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+            }
+            (function(){
+                'use strict'
+                // declarar a variavel tornaria impraticavel por estar dentro da função
+                // dessa forma se faz necessário ao invés de botar 
+                // var nome = ..., botar window.nome = ...
+                // uma outra solução é colocar apenas a palavra nome = ..., sem declarar como var e sem usar o 'use strict'
+                // window.txtNome = document.getElementById('name');
+                // var nome = txtNome.value;
+                // document.getElementById('msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+                // n é possivel usar tudo dentro do strict por haver um evento onclick
+                // n ha uma maneira de chamar uma função dentro de outra função
+            })()
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="cepCad">Cep:</label>
+
+        <input type="text" name="cepCad" id="cepCad" placeholder="8 numeros sem separador" maxlength="" required
+            title="Preencha esse campo apenas com números, sem o uso de separador(traço).">
+    </div>
+
+    <div>
+        <label for="telefoneCad">Telefone:</label>
+        <input type="tel" name="telefoneCad" id="telefoneCad" required minlength="14" maxlength="15"
+            title="Parenteses e traços(separadores) serão inseridos automaticamente." placeholder="ex: ddd + 9999-9999">
+    </div>
+    <script>
+        debugger
+        function id(el) {
+            return document.getElementById(el);
+        }
+
+        function validaCep(){
+            debugger
+            var $cep = id('cepCad').value;
+            $cep = $cep.replace(/\D/g, "");
+            $cep = $cep.replace(/(\d)(\d{3})$/g, "$1-$2");
+            id('cepCad').value = $cep;
+        }
+        
+        function validaTel() {
+            var $tel = id('telefoneCad').value;
+            $tel = $tel.replace(/\D/g, "");
+            $tel = $tel.replace(/^(\d{2})(\d)/g, "($1) $2")
+            $tel = $tel.replace(/(\d)(\d{4})$/g, "$1-$2");
+            id('telefoneCad').value = $tel
+        }
+        window.onload = function(){
+            debugger
+            id('telefoneCad').addEventListener('keypress', validaTel)
+            id('cepCad').addEventListener('keypress', validaCep)
+
+        }
+    </script>
+</body>
+
+</html>

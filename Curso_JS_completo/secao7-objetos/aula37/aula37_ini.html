@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// Quando usamos o codigo sem a parte comentada pertimitimos que ocorra um erro em caso de instancimento
+// do objeto _caneta sem usar a palavra new (ex:_caneta caneta1= |new| caneta(3, red)), pois não instanciará um obj
+// e passará a ser o modelo de objetos da classe (ou seja estará no window),
+// fazendo com que todas as novas canetas venham como 3 e red
+
+
+// var Caneta = (function(window){
+//     'use strict';
+//     console.log(this)
+    function _caneta(preco, cor){
+    
+    //privado
+    var color = cor || 'black';
+    //publicas
+    this.preco = preco || 1;                
+    this.mudarCor = function(cor){
+        if(cor !== 'red' && cor !== 'blue' && cor !== 'black'){
+            return;
+        }
+        color = cor;
+    }
+
+    this.pegaCor = function(){
+        return color;
+    }
+}
+
+// return _caneta;
+// })(window)
+
+
+
+// uma segunda forma é
+
+// (function(window){
+// //     'use strict';
+// //     console.log(this)
+//     window.Caneta= function (preco, cor){------->dessa forma a classe construtora ja se torna global
+    
+//     //privado
+//     var color = cor || 'black';
+//     //publicas
+//     this.preco = preco || 1;                
+//     this.mudarCor = function(cor){
+//         if(cor !== 'red' && cor !== 'blue' && cor !== 'black'){
+//             return;
+//         }
+//         color = cor;
+//     }
+
+//     this.pegaCor = function(){
+//         return color;
+//     }
+// }
+
+// return _caneta;
+// })(window)
+
+
+    </script>
+</body>
+</html>

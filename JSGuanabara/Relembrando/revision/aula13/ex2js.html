@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>Verificador de idade</header>
+<section>
+
+    <div id= 'ano'>
+        <p>Ano de nascimento:
+        <input type="number" placeholder="AAAA" id='txtidade' name="txtidade" min='1900'>
+    </p>
+    </div>
+    <div id= 'sex'>
+        Sexo:
+        <input type="radio" name='radsex' id= 'mas'  checked>
+        <label for="mas">Masculino</label>
+        <input type="radio" name='radsex' id= 'fem' >
+        <label for="fem">Feminino</label>
+
+    </div>
+
+
+
+    <div id='btn'>
+        <input type="button" value="verificar" onclick="calcular()" >
+    </div>
+
+    <div id ='foto'>
+        <img id="img" src="">
+    </div>
+
+    <div id='res'>
+
+    </div>
+
+</section>
+<footer>
+    <p></p>
+</footer>
+    <script src="ex2js.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<div id="resultado"></div>
+    <p>qweqweqweweasdasdq</p>
+    <script src="teste.js"></script>
+    <script>
+        var a= new Cliente("Heitor", "2222-4444", "12313123123")
+        a.gravarEmMemoria()
+
+        var b= new Cliente("Victor", "3333-4444", "32132313133")
+        b.gravarEmMemoria()
+
+        var c= new Cliente({nome: "Victor",telefone: "3333-4444",cpf: "32132313133"})
+        c.gravarEmMemoria()
+
+
+        //Cliente.clientes
+        Cliente.todos()
+    </script>
+
+</html>

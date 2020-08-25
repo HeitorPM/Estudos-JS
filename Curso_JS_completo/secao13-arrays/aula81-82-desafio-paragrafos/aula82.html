@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!</p>
+    </div>
+    <script>
+        var paragrafos = document.querySelectorAll('p');
+
+        for (var i =0; i<paragrafos.length; i++){
+            paragrafos[i].innerHTML = formataParagafo(paragrafos[i].innerHTML)
+        }
+        function formataParagafo(texto){
+            var arr = texto.split(' ');
+            console.log(arr);
+            if(arr.length> 10){
+                return arr.slice(0,10).join(' ') + '...';
+            }else{
+                return texto;
+            }
+        }
+
+    </script>
+</body>
+</html>

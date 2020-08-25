@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">      
+          
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+            
+            <!-- o metodo post serve para não enviar o que submetido pela url, 
+                garantindo assim a segurança
+            -->
+            <form action="#" method="POST">
+                <label for="txtUser">Usuario</label>
+                <input type="text" id="txtUser" name="user"><br>
+                <label for="txtPass">Senha</label>
+                <input type="password" id="txtPass" name="pass">
+                <br>
+                <!-- trocou o button por submit pq o submit envia, fica perceptivel o envio pela url  -->
+                <!-- o que gera uma falha de segurança tb, que é corrigida com o metodo post -->
+                <button type="submit" id="btn">Logar</button>   
+            </form>
+            
+        </div>
+        
+        <script>
+            
+            (function(){
+                'use strict';
+                var $form = document.querySelector('form');
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+                
+                // o 
+                // faz com que ao sair de um campo ou dar enter no formulario, que o campo em questao seja validado
+                // pelo metodo
+                $form.addEventListener('submit', function(e){  
+                    if(!$txtUser.value || !$txtPass.value ){
+                        alert('Preencha todos os campos');
+                        // previne o comportamente padrão, impedindo de continuar
+                        e.preventDefault();
+                    }
+                });            
+                
+                
+                
+                
+            })()
+            
+        </script>
+        
+    </body>
+</html>

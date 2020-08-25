@@ -1,0 +1,36 @@
+<script>
+    
+    function mostrarGenero(){
+        
+     alert('O valor selecionado é '+ getRadioValor('genero'));
+    }
+     
+    function getRadioValor(name){
+     var rads = document.getElementsByName(name);
+      
+     for(var i = 0; i < rads.length; i++){
+      if(rads[i].checked){
+    
+       return rads[i].value;
+       
+      } 
+     }
+      alert('indique um sexo válido!')
+     var x=0
+     return false;
+    }
+    function val{
+
+    }
+   </script>
+    
+    <form name="form">
+   <input id='Masculino' type='radio' name='genero' value='Masculino' />
+   <label for='Masculino'>Masculino</label>
+   
+   <input id='Feminino' type='radio' name='genero' value='Feminino' />
+   <label for='Feminino'>Feminino</label>
+</form>
+    
+    
+   <button onclick='mostrarGenero()'> Mostra valor </button>

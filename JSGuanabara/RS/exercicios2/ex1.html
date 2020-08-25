@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="princi">
+    <button name="btn" id="btn" onclick="quadradear()">A wild square appeared</button> 
+</div>
+    <div class="box"></div>
+
+
+<script>
+    function quadradear(){
+        alert('Criando um quadrado');
+
+        var vert = 1;
+        var hor = 1;
+        var boxElement = document.querySelector('.box');
+
+        if(hor == 10){
+            hor=1;
+            vert++;
+        boxElement.style.margin-screenLeft = hor * 100;
+        boxElement.style.margin-top = vert * 100;
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#FF0';
+        else{
+        boxElement.style.margin-top = vert * 100;
+        boxElement.style.margin-screenLeft = hor * 100;
+        boxElement.style.width = 100;
+        boxElement.style.height = 100;
+        boxElement.style.backgroundColor = '#FF0';
+
+        }
+    }
+    
+    }
+    
+    
+    </script>
+</body>
+
+</html>

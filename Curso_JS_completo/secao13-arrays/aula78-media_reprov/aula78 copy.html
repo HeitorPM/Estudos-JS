@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- usar queryselector passando por array -->
+    <!-- inserir html pela dom -->
+    <div id='d1'>
+    <!-- <input type="number" id='n1' placeholder="inserir Nota 1 ">
+    <input type="number" id='n2' placeholder="inserir Nota 2 "> -->
+</div>
+    <div id="resultado"></div>
+
+    <script>
+        (function () {
+            debugger
+            var $d1 = document.getElementById('d1');
+
+            var n1 = document.createElement('input');
+            n1.setAttribute('type', 'number');
+            n1.setAttribute('id', 'n1');
+            n1.setAttribute('placeholder', 'Inserir nota 1');
+            $d1.appendChild(n1)
+
+            var n2 = document.createElement('input');
+            n2.setAttribute('type', 'number');
+            n2.setAttribute('id', 'n2');
+            n2.setAttribute('placeholder', 'Inserir nota 2');
+            $d1.appendChild(n2)
+
+
+            var btn = document.createElement('input');
+            btn.setAttribute('type', 'button');
+            btn.setAttribute('value', 'Calcular média');
+            $d1.appendChild(btn);
+            btn.addEventListener('click', avaliacao);
+
+            function avaliacao() {
+
+                var $n1 = Number(document.getElementById('n1').value);
+                var $n2 = Number(document.getElementById('n2').value);
+                var $result = document.getElementById('resultado');
+
+
+                if (!validar($n1, $n2) && calcularMedia($n1, $n2) >= 5) {
+
+                    $result.innerHTML = `Aluno aprovado com nota ${calcularMedia($n1, $n2)}`
+
+                } else {
+                    $result.innerHTML = 'Aluno reprovado'
+                }
+
+            }
+            function validar(nota1, nota2) {
+                if (nota1 == 0 || nota2 == 0) {
+                    return true;
+                }
+            }
+            function calcularMedia(nota1, nota2) {
+                var media = (nota1 + nota2) / 2;
+                return media;
+            }
+
+
+        })()
+    </script>
+</body>
+
+</html>

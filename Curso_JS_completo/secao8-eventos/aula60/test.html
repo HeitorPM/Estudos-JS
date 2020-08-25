@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div { background: yellow; border: 1px solid black; padding: 10px; } 
+div {
+    background: yellow;
+    border: 1px solid black;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+<div oncontextmenu="myFunction(event)">
+<p>Right-click inside this box to see the context menu!
+</div>
+<script>
+function myFunction(e) {
+  e.preventDefault();
+  //do something differant context menu
+  alert("You right-clicked inside the div!");
+}
+</script>
+<!--if it helpful visit once http://topprojects.ml for more stuf-->
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height:200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" name="local" class="place">
+        interaja...
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <div id="Calculadora">
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtn1" id="texton1">
+        <input type="number" name="txtn2" id="texton2">
+        <input type="button" id="btn1" name="btn1"  value="+">
+    </div>
+    <div id="res">Resultado</div>
+
+
+
+<script>
+
+
+//busca por erros
+//inspect - elements
+
+//formas diferentes de pegar um elemento
+//OBS: CUIDADO, O VSCODE VAI SUGERIR ELEMENTS NO PLURAL
+// E VAI DAR ERRO!!!!!!
+//OBS2: CUIDADO, USAR O BY NAME PODE DAR ERRO TB, PREFIRA O BY ID   
+
+var a = document.getElementById("area");
+var b = document.getElementsByName("local");
+var c = document.getElementsByClassName("place");
+var d = document.getElementsByTagName("div");
+
+//funções para exemplificar
+
+function clicar(){
+    a.innerText="clicou!"
+    a.style.background="red"
+}
+function entrar(){
+a.innerText = "entrou!"
+}
+function sair(){
+    a.innerText = "saiu!"
+    a.style.background="green"
+}
+
+// 2 formas de botar no codigo
+//pelo html
+/*
+dentro da div area, inserir os eventos, ex:
+<div id="area" onclick="clicar()" onmousenenter="entrar()" onmouseout="sair()">
+*/
+
+//pelo js
+a.addEventListener('click', clicar)
+a.addEventListener('mouseenter', entrar)
+a.addEventListener('mouseout', sair)
+
+
+// CALCULADORA
+
+
+window.document.getElementById("btn1").addEventListener('click', somar)
+
+
+function somar(){
+    var tn1 = window.document.getElementById('texton1')
+    var tn2 = window.document.getElementById('texton2')
+    //por query selector seria  var tn2 = window.document.querySelector('input#txtn2')
+    var res = window.document.getElementById('res')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1+ n2
+    res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${s}`
+}
+
+/*  Inserindo data
+
+    var agora = new Date()
+    var hora= agora.getHours()
+    ou
+    var hora= agora.getDay()
+        retorna um numero de 0 a 6
+        sendo 0 domingo
+
+*/
+
+
+</script>
+
+
+
+    
+</body>
+</html>

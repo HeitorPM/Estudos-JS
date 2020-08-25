@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='nome'>
+        Heitor Paiva Magalhães 
+    </div>
+    <input type="button" value="formatar">
+
+
+
+
+    <script>
+       
+            var $nome = document.getElementById('nome');
+            console.log($nome.value)
+            // var nome = $nome.value;
+            // var nomeFormatado = formatar(nome);
+
+            var nome2 = "Heitor Paiva Magalhães";
+            var nomeFormatado2 = formatar(nome2);
+
+            function formatar($nome){
+                let posLetraUN = $nome.lastIndexOf(" ");
+                let ultimoNome = $nome.slice(posLetraUN);
+                console.log('ultimoNome', ultimoNome);
+                let primeirosNomes = $nome.slice(0,posLetraUN);
+                console.log('primeirosNomes', primeirosNomes);
+
+                let nomeformat = ultimoNome + ", " + primeirosNomes;
+                return nomeformat;
+            }
+
+            console.log(nomeFormatado2)
+      
+
+
+    </script>
+</body>
+</html>

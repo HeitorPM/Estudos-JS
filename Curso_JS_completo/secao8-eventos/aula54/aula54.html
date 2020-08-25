@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tudo">
+        <input type="text" id="txt">
+        <input type="button" value="acrescentar" id = 'btnAdd'>
+        <ul id='lista'>
+
+        </ul>
+    </div>
+    <script>
+        (function(){
+       
+        var $btnAdd = document.getElementById('btnAdd')
+        var $lista = document.getElementById('lista')
+        var $txt = document.getElementById('txt');
+
+        $btnAdd.addEventListener('click',adicionar)
+        
+        function adicionar(){
+            var nLi = document.createElement('li');
+            nLi.innerText= $txt.value;
+            $lista.appendChild(nLi);
+            $txt.value = '';
+            $txt.focus();
+
+            
+        }
+        
+       })()
+ 
+    </script>
+</body>
+</html>

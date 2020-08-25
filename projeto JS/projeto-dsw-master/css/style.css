@@ -1,0 +1,253 @@
+#container{
+  /*padding: 5px;*/
+  grid-template-areas: "area1"
+  "area2"
+  "area3";
+
+  grid-template-rows: 11vh 75vh 10vh;
+}
+
+.metade{
+  width: 50%;
+  margin: 0px 0px 0px 0px;
+}
+
+.listaHeader{
+  list-style-type: none;
+  padding-inline-start: 0px;
+  display:inline-block;
+}
+
+.headerNav{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  background-color: #333;
+  height: 50px;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.emailRec{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#container a{
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(21, 199, 154);
+  font-size: 15px;
+}
+
+.header{
+  padding: 5px 10px;
+  display: flex;
+  background-color: #333;
+}
+
+#main {
+  display: grid;
+  align-itens: center;
+  justify-items: center;
+}
+
+.menuLogin{
+  display: flex;
+  align-items:center;
+  margin-bottom: 20px;
+}
+
+
+
+#loginRec{
+  border: solid 1px gray;
+  height: 150px;
+  padding: 30px 20px 0px 20px;
+  row-gap: 3px;
+}
+
+#loginRec div{
+  height: 35px;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  text-align: left;
+
+  display: flex;
+  justify-content: center;
+}
+
+#loginRec div label{
+  flex-grow: 1;
+  line-height: 32px;
+
+}
+
+#loginRec div button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  outline: none;
+
+  background-color:dodgerblue;
+  border-radius: 2px;
+  
+  cursor: pointer;
+  font-family: inherit;
+  color: white;
+  width: 70px;
+}
+
+
+#login{
+  border: solid 1px gray;
+  width: 300px;
+  height: 150px;
+  padding: 20px 20px 8px 20px;
+  row-gap: 3px;
+}
+
+#login div{
+  height: 35px;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  text-align: left;
+
+  display: flex;
+  justify-content: center;
+}
+
+#login div label{
+  flex-grow: 1;
+  line-height: 32px;
+
+}
+
+#login div button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  outline: none;
+
+  background-color: rgb(21, 199, 154);
+  border-radius: 2px;
+  
+  cursor: pointer;
+  font-family: inherit;
+  color: white;
+  width: 70px;
+}
+
+  #footer{
+    /*background-color: blue;*/
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  
+  #cadastro label{
+    margin-right: 7px;
+  }
+
+  #cadastro{
+    grid-template-areas: "area1"
+    "area2"
+    "area3"
+    "area4"
+    "area5";
+    row-gap: 15px;
+  }
+
+  section#basic-infos{
+    grid-area: area1;
+  }
+  
+  section#contact{
+    grid-area: area2;
+  }
+  
+  section#adress{
+    grid-area: area3;
+  }
+  
+  #cadastro section div{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+  }
+  
+  section div label{
+    line-height: 32px;
+    width: 100px;
+  }
+  
+  #sex-choice input[type=radio] {
+    position: relative;
+    top: 7px;
+    margin-right: 5px;
+  }
+
+  /* primeira formatação  pagina cadastro*/
+  #headercadastro{
+    padding-left: 20px;
+    justify-content: start;
+    align-content: center;
+    grid-area: h;
+    color: rgb(21, 199, 154);
+  }
+  
+  #maincadastro{
+    padding: 6px 0px 0px 39px;
+    grid-area:c;
+  }
+
+  #maincadastro a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(21, 199, 154);
+    font-size: 15px;
+  }
+/* segunda formatação */
+  .butCad{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    outline: none;
+    background-color: rgb(21, 199, 154);
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: inherit;
+    color: white;
+    width: 70px;
+    height: 35px;
+    border-radius: 30px;
+  }
+
+  body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .btnRec{
+    margin-top: 20px;
+    
+  }
+
+  .logo{
+    width: 50px;
+    height: 40px;
+    margin-left: 50px;
+    padding: 5px;
+  }

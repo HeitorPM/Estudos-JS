@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <input type="numeber" id="n2">
+    <input type="button" id='btn' value="calcular media">
+    <div id='demo'></div>
+
+    <script>
+        (function(){
+            debugger;
+            var $btn=document.getElementById('btn');
+            $btn.addEventListener('click',calcular);
+
+            function calcular(){
+            var $n1=Number(document.getElementById('n1').value);
+            var $n2=Number(document.getElementById('n2').value);
+            var media = new Number(($n1+$n2)/2);
+            var $demo = document.getElementById('demo');
+            $demo.innerHTML=media.toFixed(2);
+
+            }
+
+
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ['1',20, 2,3,4,5, 'kjkl', 20 , '30'];
+
+        // o every vai fazer o comando para cada um dos elementos
+        // somente o el é obrigatorio
+        var sohNumeros = arr.every(function(el, indice, obj){
+            // vai mostrar o elemento em si, no caso 1 para o primeiro
+            console.log(el);
+            // vai mostrar onde se encontra no indice do array
+            console.log('indice', indice);
+            // vai mostrar o objeto em si, no caso todo o array
+            console.log(obj);
+            return true;
+        }) 
+        // como no array tem uma string, ele devolve falso
+        var sohNumeros2 = arr.every(function(el, indice, obj){
+            return typeof el  === 'number';
+        })
+        console.log(sohNumeros2);
+
+        // o some devolve baseado na amostragem de pelo menos 1 
+        // logo retornará verdadeiro
+        var aoMenosUmNumero = arr.some( function(el){
+            return typeof el === 'number';
+
+        });
+        // filtra de acordo com o desejado
+        var numeros = arr.filter(function(el, i , arr){
+            return typeof el === 'number';
+        })
+        console.log(numeros);
+
+        // looping que executa uma função para cada um dos elementos
+        arr.forEach(function (el, i ,arr){
+
+            console.log('el=', el, ' | i=', i , ' | i - ', arr.toString())
+        })
+        // cria um novo array com resultados da chamada da funçao para cada elemento do array chamado
+        numeros = numeros.map(function(el, i , arr){
+            return el * i;
+        })
+        console.log(numeros)
+
+        // bonus
+        // string.split(separator, limit)
+        // separa de acordo com o caracter indicado
+        // retornando um array , o segundo parametro 
+        // indica a quantidade de elementos que devem ser retornados
+        var txt='Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis, quisquam quia!'
+        var txt2= txt.split(' ');
+        console.log(txt2);
+
+
+        // aula74
+
+        // busca a posicao da primeira aparicao
+        //  retorna a posicao exata
+        var posicaoStr1 = arr.indexOf(20);
+        console.log('posicaoStr1', posicaoStr1);
+
+
+         // busca a posicao da primeira aparicao a partir do indice que se baseia no segundo parametro
+        //  retorna a posicao exata
+         var posicaoStr1 = arr.indexOf(20,5);
+        console.log('posicaoStr1', posicaoStr1);
+
+        // busca a posicao da ultima aparicao 
+        //  retorna a posicao exata
+
+        var posicaoStr2 = arr.lastIndexOf(20);
+        console.log('posicaoStr2', posicaoStr2);
+
+        // busca a partir do indice 5
+        //  retorna a posicao contando como indice 0, a posição logo após ao indice indicado na busca
+        // ex se 20 esta na pos 7, retorna pos 1
+
+        var posicaoStr2 = arr.lastIndexOf(20,5);
+        console.log('posicaoStr2', posicaoStr2);
+
+
+        // concatena o array com os parametros
+        var arr2 = arr.concat(numeros, 'ola', 'arr2', 100);
+        console.log(arr2);
+
+        // transforma em string (semalhante ao toString) com a possibilidade e usar
+        // um caracter separador
+        var str = arr2.join('--');
+        console.log(str);
+
+
+        // aula 75
+
+        // modifica de forma permanente
+        // inserir item no final do array
+        arr.push('novo item');
+        console.log(arr)
+
+        // modifica de forma permanente
+        // retira o ultimo indice do array
+        var ultimoItem = arr.pop();
+        console.log(ultimoItem);
+        console.log(arr);
+
+        // modifica de forma permanente
+        // retira o primeiro indice do array
+        var primeiroItem = arr.shift();
+        console.log(typeof primeiroItem);
+        console.log(arr);
+
+        // modifica de forma permanente
+        // inserir item no inicio array
+        arr.unshift('novo item');
+        console.log(arr)
+
+        // aula76
+        var arr2 = [2,4,6,8]
+
+        // faz uma operação no array, que usa a função indicada em cada número,
+        // indicando o anterior e o atual, fazendo iterações,
+        // geralmente relacionado a soma ou subtração
+        var somaDeArr2 = arr2.reduce(function(anterior, atual){
+            return anterior + atual;
+        });
+        console.log(somaDeArr2)
+
+        // ou 
+        // obs:pode ser feito com Strings
+        // obs:dentro do parametro onde se estabelece o soma,
+        // pode ser declarado como arr2.reduce(soma,10) para determinar 
+        // que meu primeiro numero anterior seja 10
+        var somaDeArr2 = arr2.reduce(soma);
+        function soma(anterior, atual, i){
+        console.log('anterior', anterior, ' | atual', atual, ' | i', i)
+        return anterior + atual + i;
+        }
+        console.log(somaDeArr2)
+
+        // faz de trás pra frente
+        var somaDeArr2 = arr2.reduceRight(soma);
+        function soma(anterior, atual, i){
+        console.log('anterior', anterior, ' | atual', atual, ' | i', i)
+        return anterior + atual + i;
+        }
+        console.log(somaDeArr2)
+
+        // invertendo o array (mudança eterna/destrutiva)
+        var arr = [1,3,4];
+        arr.reverse();
+        console.log(arr)
+
+        // pega os numeros do array baseado nos índices
+        // no caso abaixo vai pegar a partir do segundo indice
+        console.log(arr.slice(2));
+        
+        // pega os numeros do array baseado nos índices, 
+        // até o segundo parametro (o segundo número não entra)
+        console.log(arr.slice(0,2));
+
+        var arr3 = [1,2,3,4,5,6]
+        // remove o conteudo a partir do indice x(2), y(3) conteudos do array e insere no lugar
+        // os parametros restantes
+        // obs: tem como retorno um array com o que foi retirado do array
+        var arr4 = arr3.splice(2, 3, 'limao', 'melao');
+        console.log(arr3)
+        console.log(arr4)
+
+
+
+</script>
+</body>
+</html>

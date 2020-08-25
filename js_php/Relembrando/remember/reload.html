@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+</head>
+<body>
+    <form name="frmTeste" method="post" action="#" onsubmit="return validaForm(this);">
+        <p>Validação de formulário</p>
+        <p>Nome: <input type="text" name="nome" id="nome" /></p>
+        <p>Email: <input type="text" name="email" id="email" /></p>
+        <p>Sexo:
+          <label><input type="radio" name="sexo" value="M" id="masc" /> Masculino</label>
+         <label><input type="radio" name="sexo" value="F" id="masc" /> Feminino</label>
+        </p>
+        <p>Profissão
+          <select name="cargo">
+            <option value="">Selecione o cargo</option>
+            <option value="programador">Programador</option>
+            <option value="designer">Designer</option>
+            <option value="tester">Tester</option>
+            <option value="todas">Todas</option>
+         </select>
+        </p><label><input type="submit" name="sbt" value="Enviar" /></label></p>
+      </form>
+
+      
+        <script language="javascript" src="reload.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data = new Date();
+
+        // data completa
+        console.log(data.getDay())
+        // dia
+        console.log(data.getDate())
+        // mes
+        console.log(data.getMonth())
+        // ano desde 1900
+        console.log(data.getYear())
+        // ano completo normal
+        console.log(data.getFullYear())
+        // get hora
+        console.log(data.getHours())
+        // minutos
+        console.log(data.getMinutes())
+        // tempo passado desde 1970 em milisegundos = console.log(+new Date())
+        console.log(data.getTime())
+        // fixando o horario (a partir de 1970)
+        console.log(minhaData.setTime(0))
+        // pode setar a data atual q da certo
+
+        console.log(Number(minhaData.setDate(29)))
+        console.log(Number(minhaData.setMonth(11)))
+        console.log(Number(minhaData.setYear(2020)))
+        // ou
+        // obs:pode continuar botando mais numeros ate os milisegundos (h/m/s)
+        // obs 2 : pode usar barras, mas não é recomendado pq cada browser usa de um jeito diferente
+        minhaData = new Date(2020, 11, 23)
+        console.log(minhaData.setTime(0))
+
+    </script>
+</body>
+</html>

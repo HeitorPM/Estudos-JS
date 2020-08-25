@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur javascript adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae
+            laudantium numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae
+            reiciendis, quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium
+            numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis,
+            quisquam quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos perspiciatis est omnis! Sunt, beatae laudantium
+            numquam voluptate voluptates quas culpa eum vel repellendus accusantium et nesciunt recusandae reiciendis,
+            quisquam quia!</p>
+
+    </div>
+    <script>
+        var paragrafos = document.querySelectorAll('p');
+
+        // usar callback para funcionar com 1 ou 2 paramtros
+        for (var i = 0; i < paragrafos.length; i++) {
+            debugger
+            paragrafos[i].innerHTML = deixarNegrito(paragrafos[i].innerHTML, "javascript")
+        }
+        function deixarNegrito(texto, palavra) {
+            debugger
+
+            var arr = texto.split(' ');
+            var pos = arr.indexOf(palavra);
+            if (pos != -1) {
+                arr.splice(pos, 1, "<b>" + palavra + "</b>")
+                return arr.join(' ');
+            } else { return texto };
+        }
+
+    </script>
+</body>
+
+</html>

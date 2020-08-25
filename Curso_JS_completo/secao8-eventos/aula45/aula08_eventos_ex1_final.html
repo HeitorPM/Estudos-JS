@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">      
+          
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+            
+            <form action="#">
+                <label for="txtUser">Usuario</label>
+                <input type="text" id="txtUser" name="user"><br>
+                <label for="txtPass">Senha</label>
+                <input type="password" id="txtPass" name="pass">
+                <br>
+                <button type="button" id="btn">Logar</button>   
+            </form>
+            
+        </div>
+        
+        <script>
+            
+            (function(){
+                'use strict';
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+                
+                $btn.addEventListener('click', function(){
+                    // strings vazias/ o numero 0 / false retornam false
+                    // logo !$txtUser.value significa se o campo for vazio, 0 ou false o retorno é false
+                    // por conta do !
+                    if(!$txtUser.value || !$txtPass.value ){
+                        alert('Preencha todos os campos');
+                    }
+                });            
+                
+                
+                
+                
+            })()
+            
+        </script>
+        
+    </body>
+</html>

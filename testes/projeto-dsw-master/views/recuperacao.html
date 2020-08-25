@@ -1,0 +1,88 @@
+<html lang="pt-BR">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="js/main.js"></script>
+  <title>Recuperação</title>
+  
+  </head>
+
+  <body style="margin: 0px;">
+    <div id="container" class="grid-container" name="container">
+
+      <header >
+        <nav class="headerNav" id="mainNav">
+          <div class="metade" style="text-align: left; margin-left: 5%;">
+            <ul class="listaHeader">
+              <li>
+                <a  href="../index.html" > 
+              Voltar para o Login
+                </a>
+             </li>
+            </ul>
+          </div>
+          <div  id="navbarResponsive" class="container metade" style="text-align: right; margin-right: 5%;">
+            <!--
+              <ul class="listaHeader">
+                <li>
+                  <a href="views/cadastro.html" target="_self" rel="noopener noreferrer">Cadastre-se</a>
+                  
+                </li>
+              </ul>
+            -->  
+          </div>
+      </nav>
+      </header>
+      
+      <div id="main">
+        <form name="formLogin" class="menuLogin">
+          <div id="loginRec" class="emailRec" >
+
+            <div>
+                Insira o email para recuperação  
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="emailRec">
+            </div>
+            <div id='msgRecEmail' style='display:none'>
+              Email não existe
+            </div> 
+            <div class="btnRec">
+              <button style="border-radius: 30px;" onclick="recuperaEmail()">Enviar</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+   
+
+      
+
+    </div>
+
+  </body>
+
+  </html>
+
+  <script>
+
+function recuperaEmail(){
+
+  var email = document.getElementById("emailRec").value;
+  var msg = document.getElementById("msgRecEmail");
+if(email == ""){
+// msg.style.display = "block";
+ alert("Digite um email");
+//document.container.main.login.email.focus();
+return false;
+}
+  if((email != "admin") || (email != "cliente@email.com")){
+    alert("Email não existe");
+    return false;
+  }
+}
+
+ </script>
