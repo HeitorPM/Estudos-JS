@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display:grid;
+            /* é mais indicado usar a divisao em frações 
+             grid-template-columns: 1fr 1fr 1fr; */
+            /* ou 
+             grid-template-columns:repeat((2, 1fr 2fr);*/
+             grid-template-columns:repeat(3, 1fr);
+
+             /*para aumentar a altura da grid basta usar
+             grid-auto-row:100px; 
+              */
+
+              /* serve para tornar a grif flexivel de um mínimo até um máximo, permitindo que o texto caiba  */
+            grid-auto-rows:minmax(100px,auto);
+
+            grid-gap: 0.2em;            
+
+            
+        }
+
+
+        .wrapper > div {
+        background: #eee;
+            padding: 0.5em;
+        }
+        .wrapper > div:nth-child(even){
+            background:#ddd ;
+        }
+
+
+
+
+
+        /* grid inception */
+        .nested{
+            display:grid;
+            /* repete caixas de uma fraçao dividindo a tela em 3, até acabar*/
+            grid-template-columns:1fr 1fr 1fr;
+            grid-auto-rows: 70px;
+            grid-gap:1em;
+
+        }
+
+        .nested div{
+            border:#333 1px solid;
+            padding: 1em;
+
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+       
+           <div>lorem ipsum donor</div>
+           <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga odio rerum officia fugiat quisquam voluptates quidem dignissimos impedit ea veniam eum est esse aut sequi vero, alias provident deleniti quos. Minus magnam, optio doloribus quasi quo omnis voluptates possimus saepe?</div>
+           <div class="nested">
+               <div class="box1">box1</div>
+               <div class="box2">box2</div>
+                <div class="box3">box3</div>
+                <div class="box4">box4</div>
+                <div class="box5">box5</div>
+                <div class="box6">box6</div>
+                <div  class="box7">box7</div>
+                <div  class="box8">box8</div>
+
+
+           </div>
+           <div>lorem ipsum donor</div>
+           <div>lorem ipsum donor</div>
+           <div>lorem ipsum donor</div>
+           <div>lorem ipsum donor</div>
+           <div>lorem ipsum donor</div>
+
+        
+    </div>
+</body>
+</html>

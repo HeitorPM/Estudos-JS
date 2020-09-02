@@ -1,0 +1,85 @@
+body{
+    color:#FFFFFB;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section{
+    padding: 30vh 0;
+}
+
+.one__icon{
+    background: rgba(0, 0, 0, .3);
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    /* centraliza o rosto com display e place item */
+    display: grid;
+    place-items:center;
+    font-size: 2em;
+
+
+
+}
+
+.one{
+    background: #ffc145;
+    position: relative;
+}
+
+/* inserir seta ao fundo */
+
+.one::after,
+.one::before{
+    position: absolute;
+    content: '';
+    width: 150px;
+    height:150px;
+    background: #ffc145;
+    bottom: -1em;
+    z-index:100;
+}
+
+.one::before{
+    right: 50%;
+    transform: skew(0,20deg);
+}
+.one::after{
+    left: 50%;
+    transform: skew(0,-20deg);
+}
+/* acaba aqui */
+
+
+
+
+/* clipart na pagina 
+o calc no terceiro ponto - 10vw serve para manter o angulo mesmo ao aumentar ou diminuir o tamanho da pg
+ver o que a unidade vw
+*/
+.two{
+    background: lightblue;
+    position: relative;
+    z-index: 10;
+    clip-path: polygon( 0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+}
+
+/* clipart na imagem */
+
+.two__image{
+    /* clip-path:circle(35%); */
+    clip-path:polygon(0 0, 100% 0, 50% 50%, 100% 100%,  0 100%,50% 50%);
+    transition: transform .8s ease-in-out;
+}
+
+.two__image:hover{
+    transform:rotate(180deg);
+}
+
+.three{
+    background: #ffc145;
+    position: relative;
+}

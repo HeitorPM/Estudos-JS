@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content='ie=edge'>
+    <title>Document</title>
+    <!-- foi inserido o link para icones do bootstrap -->
+    <link  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
+    
+    <!-- para animar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha512-TyUaMbYrKFZfQfp+9nQGOEt+vGu4nKzLk0KaV3nFifL3K8n7lzb8DayTzLOK0pNyzxGJzGRSw78e8xqJhURJ3Q==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <!-- classe para muda a logo -->
+        <!-- span para mudar apenas parte 
+        do titulo -->
+        <h1 class="brand"><span>Empresa</span> XYZ</h1>
+        <!-- na classa wrapper, bote todo o formulario, ela servirá como uma caixa para tudo -->
+        <div class="wrapper animated bounceInLeft">
+            <!-- aqui vai servir para editar somente a informação da companhia -->
+            <div class="company-info">
+                <h3>Acme web design</h3>
+                <ul>
+                    <!-- serve para inserir o icone, procurar sobre iclass -->
+                    <li><i class="fa fa-road"></i>Estrada de Jacarepaguá 7818</li>
+                    <li><i class="fa fa-phone"></i>(555) 55555-5555</li>
+                    <li><i class="fa fa-envelope"></i>teste@fleuris.com</li>
+                </ul>
+            </div>
+            <!-- daqui pra baixo pegara o titulo do contato,
+            e todos os campos -->
+            <div class="contact">
+                <h3>Contate-nos</h3>
+                <form>
+                    <p>
+                        <label for="Name">Nome</label>
+                        <input type="text" name="name">
+                    </p>
+                    <p>
+                        <label for="Empresa">Empresa</label>
+                        <input type="text" name="Empresa">
+                    </p>
+                    <p>
+                        <label for="Email">E-email</label>
+                        <input type="email" name="email">
+                    </p>
+                    <p>
+                        <label for="Cel">Contato</label>
+                        <input type="text" name="Cel">
+                    </p>
+                    <p class= "full">
+                        <label for="msg">Menssagem</label>
+                        <textarea name="msg" row="S"></textarea>
+                    </p>
+                    <p class= "full">
+                        <button>Submeter</button>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

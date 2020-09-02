@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            /* grid facilita a criação de sites dividos em retangulos, quadrados ou afins,  */
+            display:grid;
+            /* define o percentual da tela que vai ser dedicado a cada fileira, pode ser em maior quantidade. ex: 30% 30% 40% */
+            grid-template-columns: 70% 30%;
+     
+            
+            /* separador vertical das colunas
+            grid-column-gap: 1em; */
+
+            /* separador horizontal das colunas 
+            grid-row-gap: 1em; */
+
+            /* shorthand dos separadores */
+            grid-gap: 1em;
+        }
+
+
+        .wrapper > div {
+        background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(even){
+            background:#ddd ;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sapiente, ratione, esse saepe ea quidem impedit dolores quos dolorum nostrum praesentium tempora exercitationem laudantium inventore tempore nobis necessitatibus aperiam voluptates.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, fugit nam animi rerum doloribus tenetur, neque dolores explicabo, quod cupiditate pariatur magnam fuga. Maiores repellat, necessitatibus voluptatum sapiente quae suscipit.
+        </div>
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa doloribus laudantium ducimus voluptates nihil architecto placeat, cupiditate a vero eveniet id provident animi facilis numquam molestias quo incidunt ipsum corrupti?
+        </div>
+                <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sapiente, ratione, esse saepe ea quidem impedit dolores quos dolorum nostrum praesentium tempora exercitationem laudantium inventore tempore nobis necessitatibus aperiam voluptates.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, fugit nam animi rerum doloribus tenetur, neque dolores explicabo, quod cupiditate pariatur magnam fuga. Maiores repellat, necessitatibus voluptatum sapiente quae suscipit.
+        </div>
+        
+    </div>
+</body>
+</html>

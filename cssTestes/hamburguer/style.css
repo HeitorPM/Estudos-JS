@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+}
+
+/* tudo que se encontra dentro do botao */
+.menu-btn{
+    position: relative;
+    display: flex;
+    /* procurar diferença */
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    /* procurar */
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid #fff;
+}
+
+/* traço do meio */
+.menu-btn__burger{
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    /* bolear a borda */
+    border-radius: 20px;
+    /* se performance importar, tire a sombra */
+    /* shorthand do box shadow  1º - h/b , 2º - l/r, 3º blur, 4º cor*/
+    box-shadow: 0 2px 10px rgba(255, 47, 47, 0.8);
+    /* transition tem 2 shorthand e ambos depender de um disparador tipo hover */
+    /* um funciona como  1º width(height ou qualquer outra coisa) 2º o atraso para execução 
+    3º a velocidade como vai executar 4º a forma ex: width 1s linear 2s
+    */
+    /* 1º:qual parte, o default value é all 2ºtempo para execução 3º forma gradual   */
+    transition: all .5s ease-in-out;
+}
+
+/* certamente da pra fazer de forma melhor */
+/* aqui ele cria os dois traços, um antes e outros depois de carregar o menu-btn__burger */
+.menu-btn__burger::before,
+
+.menu-btn__burger::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(47, 50, 255, 0.2);
+    transition: all .5s ease-in-out;
+}
+
+/* mudar local do traço superior */
+.menu-btn__burger::before{
+    transform: translateY(-16px);
+}
+/* mudar local do traço inferior */
+.menu-btn__burger::after{
+    transform: translateY(16px);
+}
+
+/* animação */
+.menu-btn.open .menu-btn__burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+
+}
+.menu-btn.open .menu-btn__burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+
+    
+}
+.menu-btn.open .menu-btn__burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+
+    
+}

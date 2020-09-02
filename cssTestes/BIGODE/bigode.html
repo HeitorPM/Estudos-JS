@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <style>
+        /* formas de criar elementos 
+        1- pseudo-elementos> usar div::before{} e 
+            usar div::after{}
+        2 - shadow > pode se ter multiplas sombras em multiplas cores de apenas um objeto
+        
+        3- da para criar elementos usando ul>li's modelando o background com cor de cada um deles
+        */
+       /* bordas podem ser criadas individualmente */
+
+        .mustache {
+            width: 180px;
+            height: 180px;
+            left: 100px;
+            border-radius: 50%;
+            position: absolute;
+            color: black;
+            /* background-color: currentColor ; */
+            box-shadow: 
+                150px 240px 0 0 currentColor,
+                300px 240px 0 0 currentColor;
+
+            }
+            /* ponta do lado esquerdo do bigode */
+            .mustache::before{
+                content: '';
+                position: absolute;
+                margin-left: 30px;
+                margin-top:120px;
+                width: 210px;
+                height: 120px;
+                border-bottom: solid 180px currentColor;
+                border-radius: 0 0 0 100%;
+
+                /* girando o bigode */
+                transform: rotate(-40deg);
+                transform-origin: right 210px;
+            }
+            .mustache::after{
+                content: "";
+                position: absolute;
+                margin-left: 390px;
+                margin-top:120px;
+                width: 210px;
+                height: 120px;
+                border-bottom: solid 180px currentColor;
+                border-radius: 0 0 100% 0;
+
+                /* girando o bigode */
+                transform: rotate(40deg);
+                transform-origin: left 210px;
+            }
+
+
+
+</style>
+      <title>Document</title>
+</head>
+<body>
+<div class="mustache">
+
+</div>
+</body>
+</html>
